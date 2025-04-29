@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Insightify, our mission, and how we help with depression self-assessment.">
+    <title>About - Insightify</title>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/insightify.JPG') }}" alt="Insightify Logo">
+        </div>
+        <div class="title">
+            <h1>Insightify</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('user.index') }}">Home</a></li>
+                <li><a href="{{ url_for('user.test') }}">Take the Test</a></li>
+                <li><a href="{{ url_for('user.about') }}">About</a></li>
+                <li><a href="{{ url_for('user.contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logout">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+<main>
+    <section class="about-intro">
+        <h2>About Insightify</h2>
+        <p>Insightify is a platform dedicated to helping individuals gain a better understanding of their mental health. Our depression self-assessment test is based on the **Patient Health Questionnaire-9 (PHQ-9)**, a scientifically validated tool for screening depression.</p>
+    </section>
+
+    <section class="mission">
+        <h3>Our Mission</h3>
+        <p>We aim to **empower individuals** by providing a simple and confidential way to assess their mental health. Depression can be difficult to recognize, and we believe that early self-assessment can help people take the first step toward support and recovery.</p>
+    </section>
+
+    <section class="how-it-works">
+        <h3>How It Works</h3>
+        <ol>
+            <li>Answer **9 simple questions** based on common depression symptoms.</li>
+            <li>Receive an **immediate result** indicating whether you may be experiencing depressive symptoms.</li>
+            <li>If needed, get **recommendations** for seeking professional help.</li>
+        </ol>
+        <p><strong>Note:</strong> This test is not a substitute for professional diagnosis. If you're struggling, please consult a mental health professional.</p>
+    </section>
+
+    <section class="privacy">
+        <h3>Your Privacy Matters</h3>
+        <p>At Insightify, we value your privacy. Your responses are not stored, shared, or used for any purpose other than providing an immediate assessment.</p>
+    </section>
+
+    <section class="cta">
+        <h3>Take the First Step</h3>
+        <p>If you're feeling uncertain about your mental health, taking the self-assessment test can provide clarity. It's quick, confidential, and free.</p>
+        <a href="test.html" class="cta-button">Take the Test</a>
+    </section>
+</main>
+
+<section id="resources" class="mental-health-resources">
+    <h2>Helpful Mental Health Resources</h2>
+    <p>Seeking support is a sign of strength. Here are some organizations that provide mental health assistance:</p>
+
+    <ul>
+        <li><strong><a href="https://koshishnepal.org/" target="_blank">KOSHISH Nepal</a></strong> - A leading organization for mental health advocacy.</li>
+        <li><strong><a href="https://www.transculturalpsychosocial.org/" target="_blank">TPO Nepal</a></strong> - Provides mental health and psychosocial support.</li>
+        <li><strong>Suicide Prevention Hotline:</strong> Dial **1166** (Mental Health Helpline in Nepal)</li>
+    </ul>
+
+    <p>If you're in crisis, please reach out to a trusted friend, family member, or mental health professional.</p>
+</section>
+
+
+<footer>
+    <p>&copy; 2025 Insightify. All rights reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

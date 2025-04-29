@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Insightify. Reach out to us for support, questions, or feedback.">
+    <title>Contact Us - Insightify</title>
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/insightify.JPG') }}" alt="Insightify Logo">
+        </div>
+        <div class="title">
+            <h1>Insightify</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('user.index') }}">Home</a></li>
+                <li><a href="{{ url_for('user.test') }}">Take the Test</a></li>
+                <li><a href="{{ url_for('user.about') }}">About</a></li>
+                <li><a href="{{ url_for('user.contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logout">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+<main>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <p>Have a question or need support? Get in touch with us through the form below, and we'll get back to you as soon as possible.</p>
+
+        <form action="#" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your Full Name">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email Address">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </section>
+
+    <section class="contact-info">
+        <h3>Get in Touch</h3>
+        <p>If you'd rather reach us through other means, here’s how you can contact us:</p>
+        <ul>
+            <li><strong>Email:</strong> support@insightify.com</li>
+            <li><strong>Phone:</strong> 01-4579332,01-4539488</li>
+            <li><strong>Address:</strong> Kamalpokhari,KTM </li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Insightify. All rights reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
